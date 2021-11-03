@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Using CSS Grid</title>
+</head>
+<body>
+    <style>
+         body {
+             color: #fff;
+             font-family: 'Nunito Semibold';
+             text-align: center;
+         } 
+
+         #content {
+             margin: 0 auto;
+             display: grid;
+             /* grid-template-columns: 30% 20% 50%; */
+             /* grid-template-columns: 1fr 2fr 1fr; */
+             /* grid-template-columns: 1fr 2fr 3fr; */
+             grid-template-columns: repeat(3, 1fr);
+             max-width: 960px;
+             /* grid-auto-rows: 200px; */
+             /* grid-auto-rows: minmax(200px, auto); */
+             /* grid-template-rows: 30% 20% 50% 40%; */
+             /* grid-template-rows: 600px 400px 200px; */
+             grid-template-rows: repeat(3, 1fr);
+             /* grid-column-gap: 10px;
+             grid-row-gap: 10px; */
+             grid-gap: 10px;
+         }
+
+         #content div {
+             background: #3bbced;
+             /* padding: 30px; */
+             font-size: 30px;
+            }
+            
+            #content div:nth-child(even) {
+                background: #777;
+                /* padding: 30px; */
+                font-size: 30px;
+         }
+    </style>
+
+
+    <div id="content">
+
+        <div>1</div>
+        <div>2</div>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eum minus natus deserunt delectus placeat sapiente maxime praesentium incidunt? Tempora dolores quidem alias recusandae omnis totam odio maxime obcaecati quia.</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+
+    </div>
+</body>
+</html>
+

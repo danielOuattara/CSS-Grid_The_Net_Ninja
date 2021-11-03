@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Using CSS Grid</title>
+</head>
+<body>
+    <style>
+        body {
+             color: #fff;
+             font-family: 'Nunito Semibold';
+             text-align: center;
+        } 
+
+        #content {
+             margin: 0 auto;
+             display: grid;
+             grid-gap: 10px;
+             max-width: 960px;
+             grid-template-columns: repeat(3, 1fr);
+             grid-auto-rows: minmax(150px, auto);
+             /* align-items: start;  */
+           /*   align-items: end; */  /* start| center| end | stretch  */
+           /*   justify-items: end;  */ /* start| center| end | stretch  */
+        }
+
+        #content div {
+             background: #3bbced;
+             padding: 30px;
+        }
+
+        #content div:nth-child(even) {
+                background: #777;
+        }
+        
+        .item {
+            border: 1px solid green ;
+        }
+
+        .one{
+            justify-self: end;
+            align-self: end;
+        }
+
+        .two{
+            align-self: center;
+            justify-self: center;
+        }
+        .three{
+            align-self: start;
+            justify-self: start;
+        }
+
+    </style>
+
+
+    <div id="content">
+
+        <div class="one item">1</div>
+        <div class="two item">2</div>
+        <div class="three item">3</div>
+        <div class="four item">4</div>
+        <div class="five item">5</div>
+        <div class="six item">6</div>
+
+    </div>
+</body>
+</html>
+
